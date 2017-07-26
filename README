@@ -1,0 +1,29 @@
+NAME
+    AnyEvent::HTTP::ProxyChain - AnyEvent::HTTP with proxy chaining support
+
+SYNOPSIS
+        use AnyEvent::HTTP::ProxyChain;
+
+        http_get "https://my.mail.ru/",
+            proxy => [ ["proxy1.example.com", 3128], ["proxy2.example.com", 3128] ],
+            sub { print $_[1] };
+
+        # ... do something else here
+
+DESCRIPTION
+    This module is a simple wrapper around AnyEvent::HTTP. It provides the
+    same functionality with one simple addition: it supports usage of
+    chaining multiple proxy servers.
+
+SEE ALSO
+    AnyEvent::HTTP.
+
+AUTHOR
+    Aleksey Mashanov <a.mashanov@corp.mail.ru>
+
+LICENSE
+    Copyright (c) 2017 Mail.Ru Group.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
