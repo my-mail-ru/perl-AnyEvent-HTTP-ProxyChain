@@ -15,7 +15,7 @@ AnyEvent::HTTP::ProxyChain - AnyEvent::HTTP with proxy chaining support
 =head1 DESCRIPTION
 
 This module is a simple wrapper around L<AnyEvent::HTTP>. It provides the same
-functionality with one simple addition: it supports usage of chaining multiple
+functionality with one simple addition: it supports chains of multiple
 proxy servers.
 
 =cut
@@ -24,12 +24,12 @@ package AnyEvent::HTTP::ProxyChain;
 
 use strict;
 use warnings;
-use AnyEvent::HTTP ();
+use AnyEvent::HTTP 2 ();
 use AnyEvent::Socket;
 
 use Exporter 'import';
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 our @EXPORT = qw/http_get http_post http_head http_request/;
 

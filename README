@@ -12,8 +12,8 @@ SYNOPSIS
 
 DESCRIPTION
     This module is a simple wrapper around AnyEvent::HTTP. It provides the
-    same functionality with one simple addition: it supports usage of
-    chaining multiple proxy servers.
+    same functionality with one simple addition: it supports chains of
+    multiple proxy servers.
 
 SEE ALSO
     AnyEvent::HTTP.
