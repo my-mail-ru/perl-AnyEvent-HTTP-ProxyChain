@@ -49,6 +49,11 @@ sub http_request($$@) {
                 my ($first_host, $first_port) = @{shift @proxies};
                 my $proxy_connect = sub {
                     my ($fh) = @_;
+                    unless ($fh) {
+                        $cb->(undef, { URL => $url, Status => 595, Reason => "$!" });
+                        return;
+                    }
+
                     my $next;
 
                     my $handle = AnyEvent::Handle->new(
